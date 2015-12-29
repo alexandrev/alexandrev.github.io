@@ -1,0 +1,6 @@
+# Starting the personal blog using hubpress
+
+:hp-tags: Personal
+
+Hello everybody! I want to start with one of my purpose for 2016 a few days earlier. My idea is to fill this blog with posts about the thing I'm doing in my github profile and things related to those projects and technology. Hope you enjoy it and you can get back to me for anything I could help or if you want to talk about any thing discuss here or a similar one.
+
