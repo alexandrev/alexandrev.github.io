@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "username": "alexandrev",
-    "repositoryName": "alexandrev.github.io",
-    "branch": "master"
-  },
-  "theme": {
-    "name": "Casper"
-  }
-}
+{"meta":{"username":"alexandrev","repositoryName":"alexandrev.github.io","branch":"master"},"site":{"url":"https://alexandrev.github.io"},"socialnetwork":{"email":"alexandre.vazquez@gmail.com","twitter":"alexandrev","github":"https://www.github.com/alexandrev"},"theme":{"name":"Casper","url":"//alexandrev.github.io/themes/Casper"}}
