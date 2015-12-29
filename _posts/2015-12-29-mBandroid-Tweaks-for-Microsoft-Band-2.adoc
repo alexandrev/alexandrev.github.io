@@ -1,10 +1,10 @@
-# mBandroid: Tweaks for Microsoft Band2 
+# mBandroid: Tweaks for Microsoft Band 2 
 
 :hp-image: covers/mbandroid_title_image.png
 
 :hp-tags: Android, Projects, MSBand
 
-image::covers/mbandroid_title_image.png[MBandroid title]
+image::covers/mbandroid_title_image.png[MBandroid title brand]
 
 I want to use my first post in this, my new blog platform to introduce my latest project you can watch on my GitHub profile, and that is mBandroid: Tweaks for your Microsoft Band. But I want to do a quick overview about the reason and the goals behind this project. As you can guess, I am a proudly owner of a Microsoft Band 2 wearable device and that's something to be proud of. The main reason to be proud is that it is a great device and I feel very happy with it. As a runner I like all the feature it has to measure your activities, tracking your sleep, the Microsoft Health platform and so on. The other reason is that nowadays I live in Spain and it is very difficult to have this product in Spain because it is not selling here yet. You have to use one of your friends in UK, US or from another country where the device has been sold. Ok! Enough about the product and more about the project.
 
