@@ -1,0 +1,10 @@
+# mBandroid: Tweaks for Microsoft Band2 
+
+
+:hp-tags: Android, Projects, MSBand
+
+I want to use my first post in this, my new blog platform to introduce my latest project you can watch on my GitHub profile, and that is mBandroid: Tweaks for your Microsoft Band. But I want to do a quick overview about the reason and the goals behind this project. As you can guess, I am a proudly owner of a Microsoft Band 2 wearable device and that's something to be proud of. The main reason to be proud is that it is a great device and I feel very happy with it. As a runner I like all the feature it has to measure your activities, tracking your sleep, the Microsoft Health platform and so on. The other reason is that nowadays I live in Spain and it is very difficult to have this product in Spain because it is not selling here yet. You have to use one of your friends in UK, US or from another country where the device has been sold. Ok! Enough about the product and more about the project.
+
+I have an Android device, to be more accurate I have a Nexus 5 device from 2013 and I am very happy with it and I have no desire to change it for another device or even another mobile platform. (I've tried all the other platforms but that's not today topic). When I try my Android phone with the band all the things works perfectly without any problem. But if I compare with the integration you could have with another platforms (specially with Windows Phone) you find that there are features that have been missed on Android phones and that's no fair. Also, when you use this device every day, you miss features that make this product even more awesome. That's the reason to be of this project. 
+
+On mBandroid, you could find a better experience when you are using your MS Band paired to your Android phone. The idea is to get involved more and more people (users and developers) to contribute to this project and to get the better possible experience. And hopefully if the Microsoft teams see if we could create a great product maybe they could shipped by default on one of their MS Band updates. 
