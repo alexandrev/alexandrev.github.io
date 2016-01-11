@@ -4,12 +4,14 @@ If you are using the Microsoft Band 2 SDK to develop and build some solutions, y
 
 Microsoft was aware of that situation as they told me via email when I notice them the issue:
 
-"Thank you for your email. This is a breaking change introduced with Android 6.0.1 which causes the SDK to fail to enumerate a connected Microsoft Band. We are working on a fix that will address this problem. "
+[quote, MS Band Team]
+Thank you for your email. This is a breaking change introduced with Android 6.0.1 which causes the SDK to fail to enumerate a connected Microsoft Band. We are working on a fix that will address this problem. 
 
 But the January 7th the release an update to the Microsoft Band 2 SDK to solve that issue (version 1.3.20105.2):
 
-"The updated SDK is now available at http://developer.microsoftband.com/bandsdk/ 
+[quote, MS Band Team]
+The updated SDK is now available at http://developer.microsoftband.com/bandsdk/ 
 
-The health app was updated to address the same issue as part of a previous update. "
+The health app was updated to address the same issue as part of a previous update. 
 
 So, now, if you are using Android 6.0.1 on your phone, you can use again the mBandroid solution.
