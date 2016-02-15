@@ -6,4 +6,22 @@ Today, I'm here again to talk you about my new project. This project it's a pers
 
 When you are a developer, consultant, architect or 'anything' related to integration technologies you have to be a XML and XPath parser. Even, nowadays when all the interfaces are migrating from XML to JSON, that move is only for the public interfaces or interfaces between services. Most of the tools, frameworks or libraries available to manage the data internally lay on XML-based data structure and XSLT and XPath to do the transformation.
 
-And, let's be honest XPath it's a tricky language-technique-thing, and it has a lot of capabilities that you are not aware of, or you are too lazy to test it. But, since the release of XPath 2.0
+And, let's be honest XPath it's a tricky language-technique-thing, and it has a lot of capabilities that you are not aware of, or you are too lazy to test it. But, since the release of XPath 2.0, this posiblities are even higher.
+
+But, another problem is how to test this expression without needed to load all your big integration tool to execute your flow or services. So, at this moment you had this possiblities:
+
+ - Use one of the crappy web-tools with no features and to have to load your big XML if their server. You probably have been used some of them and, let's be clear. They are not cool enough!
+ 
+ - Use a big XML / IDE tool: Some of the IDE allows to execute this checks. For example, Oracle JDeveloper, JetBrains IDEA and so on. But, you really want to wait 20 seconds to the program to start and waste 2GB of your RAM to do a little XPath checks? Probably not.
+ 
+ And with this problems and goals in mind, I've created this little tool Xpath-Tool to fill that gap. This is a tool written in NodeJS (with ReactJS to the GUI) to allow you with a lightweight application perform so powerfull checks.
+ 
+ These are the main features:
+ 
+ - XPath 2.0 support: The expression available with be 2.0 compliant.
+ - Snippet support: You'll be able to save the expression you have created inside the tool.
+ - Drag & Drop support: You'll be able to drag your files from any other application.
+ 
+If you want to take a look, please come to our GitHub repo and collaborate with test, PR, issue report or whatever you want or you could!!! 
+ 
+https://github.com/alexandrev/xpath-tool[XPath Tool @ *GitHub*]
