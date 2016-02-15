@@ -1,0 +1,9 @@
+# New Project: XPath-Tool
+
+:hp-tags: Development, XPath, XML
+
+Today, I'm here again to talk you about my new project. This project it's a personal need that I have not be able to fulfill with the tools (free or paid-version) at my hand. 
+
+When you are a developer, consultant, architect or 'anything' related to integration technologies you have to be a XML and XPath parser. Even, nowadays when all the interfaces are migrating from XML to JSON, that move is only for the public interfaces or interfaces between services. Most of the tools, frameworks or libraries available to manage the data internally lay on XML-based data structure and XSLT and XPath to do the transformation.
+
+And, let's be honest XPath it's a tricky language-technique-thing, and it has a lot of capabilities that you are not aware of, or you are too lazy to test it. But, since the release of XPath 2.0
