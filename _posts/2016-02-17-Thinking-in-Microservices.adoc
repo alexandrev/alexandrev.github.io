@@ -5,3 +5,12 @@
 I've been reading a lot the past weeks about the Microservices Architectural stlye and I've been facing a difficult phase of understanding this approach completely. That's because Microservices seems to be suffering the same problem that Martin Fowler described about SOA in Service Oriented Ambiguityn[http://martinfowler.com/bliki/ServiceOrientedAmbiguity.html]. It seems to be one different description of the approach depending on who are you talking to. 
 
 So, my main goal in this post (or maybe set of posts, I'm not sure if all this thoughts should be on one post or a few of them) is to put it common all this different thoughts and think about them and I'll try to have my own understanding. 
+
+We are going to start with the definition of the term that is perfectly accepted by all teh community. The definition is from Martin Fowler and James Lewis:
+
+"In short, the microservice architectural style is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. These services are built around business capabilities and independently deployable by fully automated deployment machinery. There is a bare minimum of centralized management of these services, which may be written in different programming languages and use different data storage technologies."
+
+So, the main idea is we can highlight a few key aspects:
+
+- Application is a set of services.
+- Each services run in its own process.
