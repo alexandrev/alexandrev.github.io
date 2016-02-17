@@ -1,0 +1,7 @@
+# Thinking in Microservices
+
+:hp-tags: Microservices, Architecture
+
+I've been reading a lot the past weeks about the Microservices Architectural stlye and I've been facing a difficult phase of understanding this approach completely. That's because Microservices seems to be suffering the same problem that Martin Fowler described about SOA in Service Oriented Ambiguityn[http://martinfowler.com/bliki/ServiceOrientedAmbiguity.html]. It seems to be one different description of the approach depending on who are you talking to. 
+
+So, my main goal in this post (or maybe set of posts, I'm not sure if all this thoughts should be on one post or a few of them) is to put it common all this different thoughts and think about them and I'll try to have my own understanding. 
