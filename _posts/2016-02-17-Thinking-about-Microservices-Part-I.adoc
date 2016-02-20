@@ -41,7 +41,22 @@ Ok, with initial SOA probably this features of this approach couldn't be fulfill
 Once again, here you are going to find that using the Microservices Architecture style the container concept it is to related and the link:https://www.thoughtworks.com/insights/blog/infrastructure-code-reason-smile[Infraestructure as Code] approach but that is nothing that are owned by Microservices. So, you can use the same approach to your old-fashion SOA approach.
 
 ### Built around business capabilities.
+
+Ok, nothing here. The SOA business services should be created around business capabilities. In this topic, the only difference its the size of the services. If you are building an standard SOA probably your services are big than your microservices but that's not a rule.
+
+Some standard SOA architectures have fine-grained services deployed and never have been considerated as a new architectural design.
+
 ### Communication using lightweight protocols.
+
+This is one of the major difference but not because of the SOA paradimg but because of the SOA application. So many companys, and so many SOA implementation link SOA with SOAP. So, probably, you will  have a lot of services using heavy-weight protocols like SOAP and that' a problem when you are facing a environment with so many mobile devices and third-party integrations.
+
+Today, all the communication are focus on lightweight protocols, like REST or WebSockets, for example. But that's not a new discover from the Microservices architecture, that's a common approach for every modern architecture. 
+
+So, here, there is an important different between both of the approaches about the main protocols used to communicate the services.
+
 ### Minimum centralized management.
+
+
+
 ### Differente programming languages and data storage technologies.
 
