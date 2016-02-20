@@ -7,8 +7,10 @@ I've been reading a lot the past weeks about the Microservices Architectural stl
 So, my main goal in this post (or maybe set of posts, I'm not sure if all this thoughts should be on one post or a few of them) is to put it common all this different thoughts and think about them and I'll try to have my own understanding. 
 
 We are going to start with the definition of the term that is perfectly accepted by all teh community. The definition is from Martin Fowler and James Lewis:
-
-"In short, the microservice architectural style is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. These services are built around business capabilities and independently deployable by fully automated deployment machinery. There is a bare minimum of centralized management of these services, which may be written in different programming languages and use different data storage technologies."
+	
+____
+In short, the microservice architectural style is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. These services are built around business capabilities and independently deployable by fully automated deployment machinery. There is a bare minimum of centralized management of these services, which may be written in different programming languages and use different data storage technologies.
+____
 
 So, the main idea is we can highlight a few key aspects:
 
@@ -30,3 +32,10 @@ Ok, with SOA its the same. The main goal (and the sales pitch) about SOA is that
 But I don't want to be naive here, so many articles talks about an important difference between both of the architectural styles here. SOA it is for enterprise and Microservices it is for application. So, SOA is a wide-range architectural style where all the features across your enterprise are available to be invoke and to be reused. But, using the Microservices architectural design, you are decomposing your application logic among different services. So, if you follow that thoughts you should think about SOA as a high-level approach and Microservices low-level services approach.
 
 For example, link:http://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/1601_clark.html[this article] published on IBM DeveloperWorks from Kim J Clark  covers this approach.
+
+### Each services run in its own process
+
+Ok, with initial SOA probably this features of this approach couldn't be fulfilled but nowadays Enterprise Services Bus, Distributed Computing Platform or every name you want to use to name the place where you deploy your services follows that approach. For example, I'm as a TIBCO expert with many years of experiences I'm used to see that approach since the begining. TIBCO AMX BusinessWorks since the first versions follows that approach with processes (its the way how the called their services) runs in their own OS processes and could be scale independently.
+
+Once again, here you are going to find that using the Microservices Architecture style the container concept it is to related and the link:https://www.thoughtworks.com/insights/blog/infrastructure-code-reason-smile[Infraestructure as Code] approach. 
+
