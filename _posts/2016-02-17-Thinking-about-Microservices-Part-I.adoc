@@ -28,7 +28,7 @@ Ok, we understand the key points but, if you are aware of Service Oriented Archi
 
 ### Application is a set of services
 
-Ok, with SOA its the same. The main goal (and the sales pitch) about SOA is that you are going to create a lot of business services so you can create your own application only invoking those services to fulfill these needs. So, at the paper level, no difference here.
+Ok, with SOA is the same. The main goal (and the sales pitch) about SOA is that you are going to create a lot of business services so you can create your own application only invoking those services to fulfill these needs. So, at the paper level, no difference here.
 
 But I don't want to be naive here, so many articles talks about an important difference between both of the architectural styles here. SOA it is for enterprise and Microservices it is for application. So, SOA is a wide-range architectural style where all the features across your enterprise are available to be invoke and to be reused. But, using the Microservices architectural design, you are decomposing your application logic among different services. So, if you follow that thoughts you should think about SOA as a high-level approach and Microservices low-level services approach.
 
