@@ -56,7 +56,11 @@ So, here, there is an important different between both of the approaches about t
 
 ### Minimum centralized management.
 
+With SOA you have your centralize management tool that handle all the things related to the services deployed. Using modern applications, close the gap with the microservices approach when you only have tools to do a minimum management to manage your containers or so. 
+
+When you are using a Microservices approach you cannot have a more sofisticated application management 
+
+### Different programming languages and data storage technologies.
 
 
-### Differente programming languages and data storage technologies.
 
