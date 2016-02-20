@@ -1,8 +1,9 @@
-# Thinking in Microservices
+# Thinking about Microservices - Part I 
 
 :hp-tags: Microservices, Architecture
 
-I've been reading a lot the past weeks about the Microservices Architectural stlye and I've been facing a difficult phase of understanding this approach completely. That's because Microservices seems to be suffering the same problem that Martin Fowler described about SOA in Service Oriented Ambiguityn[http://martinfowler.com/bliki/ServiceOrientedAmbiguity.html]. It seems to be one different description of the approach depending on who are you talking to. 
+
+I've been reading a lot the past weeks about the Microservices Architectural stlye and I've been facing a difficult phase of understanding this approach completely. That's because Microservices seems to be suffering the same problem that Martin Fowler described about SOA in link:http://martinfowler.com/bliki/ServiceOrientedAmbiguity.html[Service Oriented Ambiguity]. It seems to be one different description of the approach depending on who are you talking to. 
 
 So, my main goal in this post (or maybe set of posts, I'm not sure if all this thoughts should be on one post or a few of them) is to put it common all this different thoughts and think about them and I'll try to have my own understanding. 
 
@@ -37,5 +38,10 @@ For example, link:http://www.ibm.com/developerworks/websphere/library/techarticl
 
 Ok, with initial SOA probably this features of this approach couldn't be fulfilled but nowadays Enterprise Services Bus, Distributed Computing Platform or every name you want to use to name the place where you deploy your services follows that approach. For example, I'm as a TIBCO expert with many years of experiences I'm used to see that approach since the begining. TIBCO AMX BusinessWorks since the first versions follows that approach with processes (its the way how the called their services) runs in their own OS processes and could be scale independently.
 
-Once again, here you are going to find that using the Microservices Architecture style the container concept it is to related and the link:https://www.thoughtworks.com/insights/blog/infrastructure-code-reason-smile[Infraestructure as Code] approach. 
+Once again, here you are going to find that using the Microservices Architecture style the container concept it is to related and the link:https://www.thoughtworks.com/insights/blog/infrastructure-code-reason-smile[Infraestructure as Code] approach but that is nothing that are owned by Microservices. So, you can use the same approach to your old-fashion SOA approach.
+
+### Built around business capabilities.
+### Communication using lightweight protocols.
+### Minimum centralized management.
+### Differente programming languages and data storage technologies.
 
