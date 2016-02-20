@@ -1,0 +1,22 @@
+# Chocolatey - A must-have on your Windows machine
+
+:hp-tags: apt-get, Windows, Productivity
+
+First of all, I want you to know that I have been a Linux user since 2005 and I'm a great fan of the Linux package manager and specially apt-get. The simplicity and the posibilities of one have to type one command to install the app that you need is a must-have on every environment in my opinion.
+
+I'm aware that there are a lot of users that have a Terminal aprehension, so anything related to open a terminal to type a command are like a sin or illness for them, but I'm not one of them. I'm a pragmatic user. 
+
+Since my years on Linux I have to work with Windows machines as well and I miss that feature, so I embrace any project related to bring this capability to Windows. For example I remember the link:http://windows-get.sourceforge.net/[win-get CLI command] which latest modification date from 2009 but it doesn't have the users and the community to be useful. 
+
+Because the problem never was the technology to create an utility similar to apt-get, the problem always was the community. This alternative is useful depending on the number of application you can get from there and the speed their repositories get updated.
+
+And a few years later Chocolatey comes. I remember the first time I used Chocolatey was maybe on 2012 or 2013 and I get the same problems I faced when I try win-get. No users, no community and I left this alternatives as an impossible matter on Windows environments. But, a few weeks ago I visit the Chocolatey web page because some tweet I read on my timeline and I see in the first packages some of the tools I'm using on my daily basis like: 7-Zip, Google Chrome, Atom, Visual Studio Code or so. 
+
+So, I get interested and I started to fing each of the tools I have installed on my system and I see that almost all of them are in the repositories. And with no deprecrated or old versions, but with newest versions of the softare. 
+
+Software like calibre which gets updated almost every week, the repository has its newest version with a admirable speed! So, I decide to embrace the project, and I created my chocolatey script like I had on my Linux machines with my apt-get script. So, this script it's the first thing I run when I have a new machine or I reset my current windows machine (because as a Windows Insider I try to reset my PC too often).
+
+If you want take a look at my script it is available to everyone on my Github profile: link:https://github.com/alexandrev/chocolatey/blob/master/laptopPlatform.ps1[Go!]
+
+
+
