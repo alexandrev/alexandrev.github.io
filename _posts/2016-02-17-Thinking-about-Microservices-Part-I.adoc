@@ -20,7 +20,7 @@ So, the main idea is we can highlight a few key aspects:
 - Built around business capabilities.
 - Communication using lightweight protocols.
 - Minimum centralized management.
-- Differente programming languages and data storage technologies.
+- Different programming languages and data storage technologies.
 
 
 
