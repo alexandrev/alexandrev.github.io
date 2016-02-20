@@ -69,7 +69,7 @@ With the microservices approach you are going to have all the posibilities in th
 Regarding the data storage technologies is not usual to have different technologies inside your SOA architecture, normally if you use one approach all your services follows that approach (or maybe you have a few expection but it is no common). Once again, here you have more flexibility because you can use the right tool for your needs.
 
 
-This is the first part of my study, but in the next post I want to focus on the things 
+This is the first part of my study, but in the next post I want to focus on the things that makes Microservices so important for the next years in the Integration world. 
 
 
 
