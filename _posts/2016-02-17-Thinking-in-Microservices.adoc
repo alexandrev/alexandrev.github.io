@@ -14,3 +14,8 @@ So, the main idea is we can highlight a few key aspects:
 
 - Application is a set of services.
 - Each services run in its own process.
+- Communication using lightweight protocols.
+- Minimum centralized management.
+- Differente programming languages and data storage technologies.
+
+
