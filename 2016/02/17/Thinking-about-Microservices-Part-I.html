@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Thinking about Microservices - Part I - Alexandre Vazquez</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Thinking about Microservices - Part I">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Thinking about Microservices - Part I">
+    <meta property="og:description" content="">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="//alexandrev.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
+
+    <link rel="canonical" href="http://alexandrev.github.io/2016/02/17/Thinking-about-Microservices-Part-I.html" />
+    
+    <meta property="og:site_name" content="Alexandre Vazquez" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Thinking about Microservices - Part I" />
+    <meta property="og:description" content="I&amp;#8217;ve been reading a lot the past weeks about the Microservices Architectural stlye and I&amp;#8217;ve been facing a difficult phase of understanding this approach completely. That&amp;#8217;s because Microservices seems to be suffering the same..." />
+    <meta property="og:url" content="http://alexandrev.github.io/2016/02/17/Thinking-about-Microservices-Part-I.html" />
+    <meta property="article:published_time" content="2016-02-16T23:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-02-20T20:35:51.177Z" />
+    <meta property="article:tag" content="Microservices" />
+    <meta property="article:tag" content="Architecture" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Thinking about Microservices - Part I" />
+    <meta name="twitter:description" content="I&amp;#8217;ve been reading a lot the past weeks about the Microservices Architectural stlye and I&amp;#8217;ve been facing a difficult phase of understanding this approach completely. That&amp;#8217;s because Microservices seems to be suffering the same..." />
+    <meta name="twitter:url" content="http://alexandrev.github.io/2016/02/17/Thinking-about-Microservices-Part-I.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Alexandre Vazquez",
+    "author": {
+        "@type": "Person",
+        "name": "Alexandre Vazquez",
+        "image": "https://avatars.githubusercontent.com/u/947041?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://alexandev.github.io"
+    },
+    "headline": "Thinking about Microservices - Part I",
+    "url": "http://alexandrev.github.io/2016/02/17/Thinking-about-Microservices-Part-I.html",
+    "datePublished": "2016-02-16T23:00:00.000Z",
+    "dateModified": "2016-02-20T20:35:51.177Z",
+    "keywords": "Microservices,  Architecture",
+    "description": "I&amp;#8217;ve been reading a lot the past weeks about the Microservices Architectural stlye and I&amp;#8217;ve been facing a difficult phase of understanding this approach completely. That&amp;#8217;s because Microservices seems to be suffering the same..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Alexandre Vazquez" href="http://alexandrev.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+</head>
+<body class="post-template tag-Microservices tag-Architecture no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed " >
+      <div class="panel-main">
+    
+        <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+    
+            <h1 class="panel-cover__title panel-title"><a href="http://alexandrev.github.io" title="link to homepage for Alexandre Vazquez">Alexandre Vazquez</a></h1>
+            <hr class="panel-cover__divider" />
+            <p class="panel-cover__description">Developing Thoughts</p>
+            <hr class="panel-cover__divider panel-cover__divider--secondary" />
+    
+            <div class="navigation-wrapper">
+    
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="http://alexandrev.github.io/#blog" title="link to Alexandre Vazquez blog" class="blog-button">Blog</a></li>
+                </ul>
+              </nav>
+    
+              
+              
+              <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+              
+              
+                  <!-- Twitter -->
+                  <li class="navigation__item">
+                    <a href="http://www.twitter.com/alexandrev" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+              
+                  <!-- Github -->
+                  <li class="navigation__item">
+                    <a href="https://www.github.com/alexandrev" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+                  <!-- LinkedIn -->
+                  <li class="navigation__item">
+                    <a href="https://www.linkedin.com/in/alexandrevazquez" title="LinkedIn account">
+                      <i class='icon icon-social-linkedin'></i>
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+              
+                  <!-- Email -->
+                  <li class="navigation__item">
+                    <a href="mailto:alexandre.vazquez@gmail.com" title="Email alexandre.vazquez@gmail.com">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+              
+                </ul>
+              </nav>
+              
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <div class="panel-cover--overlay"></div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="17 Feb 2016" class="post-meta__date date">17 Feb 2016</time> &#8226; <span class="post-meta__tags tags">on <a href="http://alexandrev.github.io/tag/Microservices">Microservices</a>, <a href="http://alexandrev.github.io/tag/Architecture"> Architecture</a></span>
+        <span class="post-meta__author author"><img src="https://avatars.githubusercontent.com/u/947041?v=3" alt="profile image for Alexandre Vazquez" class="avatar post-meta__avatar" /> by Alexandre Vazquez</span>
+      </div>
+      <h1 class="post-title">Thinking about Microservices - Part I</h1>
+    </header>
+
+    <section class="post tag-Microservices tag-Architecture">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>I&#8217;ve been reading a lot the past weeks about the Microservices Architectural stlye and I&#8217;ve been facing a difficult phase of understanding this approach completely. That&#8217;s because Microservices seems to be suffering the same problem that Martin Fowler described about SOA in <a href="http://martinfowler.com/bliki/ServiceOrientedAmbiguity.html">Service Oriented Ambiguity</a>. It seems to be one different description of the approach depending on who are you talking to.</p>
+</div>
+<div class="paragraph">
+<p>So, my main goal in this post (or maybe set of posts, I&#8217;m not sure if all this thoughts should be on one post or a few of them) is to put it common all this different thoughts and think about them and I&#8217;ll try to have my own understanding.</p>
+</div>
+<div class="paragraph">
+<p>We are going to start with the definition of the term that is perfectly accepted by all the community. The definition is from <a href="http://martinfowler.com/articles/microservices.html">Martin Fowler and James Lewis</a>:</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>In short, the microservice architectural style is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. These services are built around business capabilities and independently deployable by fully automated deployment machinery. There is a bare minimum of centralized management of these services, which may be written in different programming languages and use different data storage technologies.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>So, the main idea is we can highlight a few key aspects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Application is a set of services.</p>
+</li>
+<li>
+<p>Each services run in its own process.</p>
+</li>
+<li>
+<p>Built around business capabilities.</p>
+</li>
+<li>
+<p>Communication using lightweight protocols.</p>
+</li>
+<li>
+<p>Minimum centralized management.</p>
+</li>
+<li>
+<p>Differente programming languages and data storage technologies.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ok, we understand the key points but, if you are aware of Service Oriented Architecture, which are the key differences between them? We are going from one to one.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_application_is_a_set_of_services">Application is a set of services</h3>
+<div class="paragraph">
+<p>Ok, with SOA its the same. The main goal (and the sales pitch) about SOA is that you are going to create a lot of business services so you can create your own application only invoking those services to fulfill these needs. So, at the paper level, no difference here.</p>
+</div>
+<div class="paragraph">
+<p>But I don&#8217;t want to be naive here, so many articles talks about an important difference between both of the architectural styles here. SOA it is for enterprise and Microservices it is for application. So, SOA is a wide-range architectural style where all the features across your enterprise are available to be invoke and to be reused. But, using the Microservices architectural design, you are decomposing your application logic among different services. So, if you follow that thoughts you should think about SOA as a high-level approach and Microservices low-level services approach.</p>
+</div>
+<div class="paragraph">
+<p>For example, <a href="http://www.ibm.com/developerworks/websphere/library/techarticles/1601_clark-trs/1601_clark.html">this article</a> published on IBM DeveloperWorks from Kim J Clark  covers this approach.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_each_services_run_in_its_own_process">Each services run in its own process</h3>
+<div class="paragraph">
+<p>Ok, with initial SOA probably this features of this approach couldn&#8217;t be fulfilled but nowadays Enterprise Services Bus, Distributed Computing Platform or every name you want to use to name the place where you deploy your services follows that approach. For example, I&#8217;m as a TIBCO expert with many years of experiences I&#8217;m used to see that approach since the begining. TIBCO AMX BusinessWorks since the first versions follows that approach with processes (its the way how the called their services) runs in their own OS processes and could be scale independently.</p>
+</div>
+<div class="paragraph">
+<p>Once again, here you are going to find that using the Microservices Architecture style the container concept it is to related and the <a href="https://www.thoughtworks.com/insights/blog/infrastructure-code-reason-smile">Infraestructure as Code</a> approach but that is nothing that are owned by Microservices. So, you can use the same approach to your old-fashion SOA approach.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_built_around_business_capabilities">Built around business capabilities.</h3>
+<div class="paragraph">
+<p>Ok, nothing here. The SOA business services should be created around business capabilities. In this topic, the only difference its the size of the services. If you are building an standard SOA probably your services are big than your microservices but that&#8217;s not a rule.</p>
+</div>
+<div class="paragraph">
+<p>Some standard SOA architectures have fine-grained services deployed and never have been considerated as a new architectural design.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_communication_using_lightweight_protocols">Communication using lightweight protocols.</h3>
+<div class="paragraph">
+<p>This is one of the major difference but not because of the SOA paradimg but because of the SOA application. So many companys, and so many SOA implementation link SOA with SOAP. So, probably, you will  have a lot of services using heavy-weight protocols like SOAP and that' a problem when you are facing a environment with so many mobile devices and third-party integrations.</p>
+</div>
+<div class="paragraph">
+<p>Today, all the communication are focus on lightweight protocols, like REST or WebSockets, for example. But that&#8217;s not a new discover from the Microservices architecture, that&#8217;s a common approach for every modern architecture.</p>
+</div>
+<div class="paragraph">
+<p>So, here, there is an important different between both of the approaches about the main protocols used to communicate the services.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_minimum_centralized_management">Minimum centralized management.</h3>
+<div class="paragraph">
+<p>With SOA you have your centralize management tool that handle all the things related to the services deployed. Using modern applications, close the gap with the microservices approach when you only have tools to do a minimum management to manage your containers or so.</p>
+</div>
+<div class="paragraph">
+<p>When you are using a Microservices approach you cannot have a more sofisticated application management because you are going to have a lot of different technologies to your services so you cannot have a common way to do the operations between the services. So, normally you manage the containers because it its the only thing in common between your microservices.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_different_programming_languages_and_data_storage_technologies">Different programming languages and data storage technologies.</h3>
+<div class="paragraph">
+<p>Normally with SOA, all your services are implemented using the same Programming Language. Once again, that is not true on all the Enterprise Services Bus. For example, TIBCO AMX Services Grid allow you to develop your services using different implementation types like: .NET, Java, Spring, Ruby or Propieraty way. But you don&#8217;t have all the flexibility you have with microservices.</p>
+</div>
+<div class="paragraph">
+<p>With the microservices approach you are going to have all the posibilities in the world. You can use it the right tool for the right momment, but you cannot do the same with your SOA. You are limited by your vendor.</p>
+</div>
+<div class="paragraph">
+<p>Regarding the data storage technologies is not usual to have different technologies inside your SOA architecture, normally if you use one approach all your services follows that approach (or maybe you have a few expection but it is no common). Once again, here you have more flexibility because you can use the right tool for your needs.</p>
+</div>
+<div class="paragraph">
+<p>This is the first part of my study, but in the next post I want to focus on the things that makes Microservices so important for the next years in the Integration world.</p>
+</div>
+</div>
+    </section>
+
+  </article>
+
+  
+  <section class="post-comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'alexandrevvzquez '; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+  
+
+
+
+            <footer class="footer">
+                <span class="footer__copyright">&copy; 2016. All rights reserved.</span>
+                <span class="footer__copyright"><a href="http://uno.daleanthony.com" title="link to page for Uno Ghost theme">Uno theme</a> by <a href="http://daleanthony.com" title="link to website for Dale-Anthony">Dale-Anthony</a></span>
+                <span class="footer__copyright">Proudly published with <a href="http://hubpress.io" title="link to Hubpress website">Hubpress</a></span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//alexandrev.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
+    
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-71852702-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+
+</body>
+</html>
