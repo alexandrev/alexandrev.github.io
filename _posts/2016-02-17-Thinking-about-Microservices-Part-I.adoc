@@ -62,7 +62,14 @@ When you are using a Microservices approach you cannot have a more sofisticated 
 
 ### Different programming languages and data storage technologies.
 
-Normally with SOA, all your services and implement using the same Programming Language. 
+Normally with SOA, all your services are implemented using the same Programming Language. Once again, that is not true on all the Enterprise Services Bus. For example, TIBCO AMX Services Grid allow you to develop your services using different implementation types like: .NET, Java, Spring, Ruby or Propieraty way. But you don't have all the flexibility you have with microservices.
+
+With the microservices approach you are going to have all the posibilities in the world. You can use it the right tool for the right momment, but you cannot do the same with your SOA. You are limited by your vendor. 
+
+Regarding the data storage technologies is not usual to have different technologies inside your SOA architecture, normally if you use one approach all your services follows that approach (or maybe you have a few expection but it is no common). Once again, here you have more flexibility because you can use the right tool for your needs.
+
+
+This is the first part of my study, but in the next post I want to focus on the things 
 
 
 
