@@ -1,0 +1,44 @@
+# A walk across Service Virtualization world
+
+:hp-tags: Service Virtualization, Development, DevOps, SOA
+
+One of the things that we hear the most in our daily basis are Service Virtualization, but probably you are not aware of this new thing. Do you? Do you know what we are talking when we talk about Service Virtualization? Ok, I'm going to try to explain to you. 
+
+Service Virtualization is the new wave to give more consistence, coherence, and a methodology to the mock/stub/dummy services you create so you don't be stopped when you are developing.
+
+Since the 2000's the use of mocks or stubs on our development are a common practice, but that's a internal technique we perform at our development team level (or even worse own machine level) so until now nobody have had a "methodology approach" to this practice to maximize the benefits from this practice and to improve the ROI.
+
+The benefits of services virtualization are well known but I'm going to summarize them:
+
+## Parallel Development
+
+If you are a developer one of your constraints are the dependency with third-parties, and that sucks. How much time do you waste on your normal work waiting for that service do you need to finish your work? That's common if you are a front-end developer or a back-end developer, but if you work on the integration level (SOA, Microservices or whatever middleware kind system do you have in the middle) you are in the worst possition because you only have this dependency. So, this is a crucial matter, a way so you could perform your job no matter what happen to every other system. 
+
+## Realiable Continuous Integration
+
+When you are working on a CI solution to have all your development quickly to the next level (even maybe production) you need to assure the availablity of every service you need to perform your tests, so you work could be judged based on your code and not based on dependencies and constraints outside of your scope. 
+
+
+## Data Management for unsual test cases
+
+Probably you need to test every scenario possible when you have an integration, so you need this dependant service return you every possible answer (OK scenario, Alternative OK scenario, KO scenario, Timeout scenario, 500 Error scenario) so you probably use different data set to create this scenario, so usually this data that exists inside the backend system ususally gets useless after a few tries or after any action in this third-party system that doesn't depend on you. So, once again, you have a problem because you are still depending on that system. This could be avoid using Service Management Tools.
+
+## Avoid using paid services
+
+Usually you have integrations with third party systems that charge you depending on the number of invocations you perform. This is a common practice nowadays with the API Management boom and the idea of monetize all the internal APIs the companies have. So, you can create your virtual service to avoid to be charged when you are doing your internal tests or non-productive work.
+
+All of these benefits are the same when you use mocks or stubs, so you cut this dependency with the real back-end system, but the nowadays Service Virtualization have also this differences:
+
+## Better tools to create scenarios
+
+Nowadays commercial tools offer you a way to create your scenarios without any code and covering all the posiblities to simulate your real service. All of the common protocols are supported: SOAP, REST, JDBC, JMS, SAP, MQ ... no matter what protocol you are using you have a simple way to create your scenario.
+
+## Virtual Service Governance
+
+You have a tool to manage all your virtual services, to deploy them, to enable them, to generate new versions.
+
+## Better ways to create your simulators
+
+New techniques to create your simulators like Recording a real service to create their simulator is one of the best techniques you can perform to quickly in a few hours to have a complete simulator of your real backend service. 
+
+
