@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>A walk across Service Virtualization world - Alexandre Vazquez</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="A walk across Service Virtualization world">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="A walk across Service Virtualization world">
+    <meta property="og:description" content="">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="//alexandrev.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
+
+    <link rel="canonical" href="http://alexandrev.github.io/2016/02/21/A-walk-across-Service-Virtualization-world.html" />
+    
+    <meta property="og:site_name" content="Alexandre Vazquez" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="A walk across Service Virtualization world" />
+    <meta property="og:description" content="One of the things that we hear the most in our daily basis are Service Virtualization, but probably you are not aware of this new thing. Do you? Do you know what we are talking when we talk about Service..." />
+    <meta property="og:url" content="http://alexandrev.github.io/2016/02/21/A-walk-across-Service-Virtualization-world.html" />
+    <meta property="article:published_time" content="2016-02-20T23:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-02-21T20:08:16.104Z" />
+    <meta property="article:tag" content="Service Virtualization" />
+    <meta property="article:tag" content="Development" />
+    <meta property="article:tag" content="DevOps" />
+    <meta property="article:tag" content="SOA" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="A walk across Service Virtualization world" />
+    <meta name="twitter:description" content="One of the things that we hear the most in our daily basis are Service Virtualization, but probably you are not aware of this new thing. Do you? Do you know what we are talking when we talk about Service..." />
+    <meta name="twitter:url" content="http://alexandrev.github.io/2016/02/21/A-walk-across-Service-Virtualization-world.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Alexandre Vazquez",
+    "author": {
+        "@type": "Person",
+        "name": "Alexandre Vazquez",
+        "image": "https://avatars.githubusercontent.com/u/947041?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": "http://alexandrev.github.io"
+    },
+    "headline": "A walk across Service Virtualization world",
+    "url": "http://alexandrev.github.io/2016/02/21/A-walk-across-Service-Virtualization-world.html",
+    "datePublished": "2016-02-20T23:00:00.000Z",
+    "dateModified": "2016-02-21T20:08:16.104Z",
+    "keywords": "Service Virtualization,  Development,  DevOps,  SOA",
+    "description": "One of the things that we hear the most in our daily basis are Service Virtualization, but probably you are not aware of this new thing. Do you? Do you know what we are talking when we talk about Service..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Alexandre Vazquez" href="http://alexandrev.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+</head>
+<body class="post-template tag-Service-Virtualization tag-Development tag-DevOps tag-SOA no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed " >
+      <div class="panel-main">
+    
+        <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+    
+            <h1 class="panel-cover__title panel-title"><a href="http://alexandrev.github.io" title="link to homepage for Alexandre Vazquez">Alexandre Vazquez</a></h1>
+            <hr class="panel-cover__divider" />
+            <p class="panel-cover__description">Developing Thoughts</p>
+            <hr class="panel-cover__divider panel-cover__divider--secondary" />
+    
+            <div class="navigation-wrapper">
+    
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="http://alexandrev.github.io/#blog" title="link to Alexandre Vazquez blog" class="blog-button">Blog</a></li>
+                </ul>
+              </nav>
+    
+              
+              
+              <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+              
+              
+                  <!-- Twitter -->
+                  <li class="navigation__item">
+                    <a href="http://www.twitter.com/alexandrev" title="Twitter account">
+                      <i class='icon icon-social-twitter'></i>
+                      <span class="label">Twitter</span>
+                    </a>
+                  </li>
+              
+              
+                  <!-- Github -->
+                  <li class="navigation__item">
+                    <a href="https://www.github.com/alexandrev" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+                  <!-- LinkedIn -->
+                  <li class="navigation__item">
+                    <a href="https://www.linkedin.com/in/alexandrevazquez" title="LinkedIn account">
+                      <i class='icon icon-social-linkedin'></i>
+                      <span class="label">LinkedIn</span>
+                    </a>
+                  </li>
+              
+                  <!-- Email -->
+                  <li class="navigation__item">
+                    <a href="mailto:alexandre.vazquez@gmail.com" title="Email alexandre.vazquez@gmail.com">
+                      <i class='icon icon-mail'></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+              
+                </ul>
+              </nav>
+              
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <div class="panel-cover--overlay"></div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="21 Feb 2016" class="post-meta__date date">21 Feb 2016</time> &#8226; <span class="post-meta__tags tags">on <a href="http://alexandrev.github.io/tag/Service-Virtualization">Service Virtualization</a>, <a href="http://alexandrev.github.io/tag/Development"> Development</a>, <a href="http://alexandrev.github.io/tag/DevOps"> DevOps</a>, <a href="http://alexandrev.github.io/tag/SOA"> SOA</a></span>
+        <span class="post-meta__author author"><img src="https://avatars.githubusercontent.com/u/947041?v=3" alt="profile image for Alexandre Vazquez" class="avatar post-meta__avatar" /> by Alexandre Vazquez</span>
+      </div>
+      <h1 class="post-title">A walk across Service Virtualization world</h1>
+    </header>
+
+    <section class="post tag-Service-Virtualization tag-Development tag-DevOps tag-SOA">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>One of the things that we hear the most in our daily basis are Service Virtualization, but probably you are not aware of this new thing. Do you? Do you know what we are talking when we talk about Service Virtualization? Ok, I&#8217;m going to try to explain to you.</p>
+</div>
+<div class="paragraph">
+<p>Service Virtualization is the new wave to give more consistence, coherence, and a methodology to the mock/stub/dummy services you create so you don&#8217;t be stopped when you are developing.</p>
+</div>
+<div class="paragraph">
+<p>Since the 2000&#8217;s the use of mocks or stubs on our development are a common practice, but that&#8217;s a internal technique we perform at our development team level (or even worse own machine level) so until now nobody have had a "methodology approach" to this practice to maximize the benefits from this practice and to improve the ROI.</p>
+</div>
+<div class="paragraph">
+<p>The benefits of services virtualization are well known but I&#8217;m going to summarize them:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parallel_development">Parallel Development</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If you are a developer one of your constraints are the dependency with third-parties, and that sucks. How much time do you waste on your normal work waiting for that service do you need to finish your work? That&#8217;s common if you are a front-end developer or a back-end developer, but if you work on the integration level (SOA, Microservices or whatever middleware kind system do you have in the middle) you are in the worst possition because you only have this dependency. So, this is a crucial matter, a way so you could perform your job no matter what happen to every other system.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_realiable_continuous_integration">Realiable Continuous Integration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you are working on a CI solution to have all your development quickly to the next level (even maybe production) you need to assure the availablity of every service you need to perform your tests, so you work could be judged based on your code and not based on dependencies and constraints outside of your scope.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_data_management_for_unsual_test_cases">Data Management for unsual test cases</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Probably you need to test every scenario possible when you have an integration, so you need this dependant service return you every possible answer (OK scenario, Alternative OK scenario, KO scenario, Timeout scenario, 500 Error scenario) so you probably use different data set to create this scenario, so usually this data that exists inside the backend system ususally gets useless after a few tries or after any action in this third-party system that doesn&#8217;t depend on you. So, once again, you have a problem because you are still depending on that system. This could be avoid using Service Management Tools.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_avoid_using_paid_services">Avoid using paid services</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Usually you have integrations with third party systems that charge you depending on the number of invocations you perform. This is a common practice nowadays with the API Management boom and the idea of monetize all the internal APIs the companies have. So, you can create your virtual service to avoid to be charged when you are doing your internal tests or non-productive work.</p>
+</div>
+<div class="paragraph">
+<p>All of these benefits are the same when you use mocks or stubs, so you cut this dependency with the real back-end system, but the nowadays Service Virtualization have also this differences:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_better_tools_to_create_scenarios">Better tools to create scenarios</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Nowadays commercial tools offer you a way to create your scenarios without any code and covering all the posiblities to simulate your real service. All of the common protocols are supported: SOAP, REST, JDBC, JMS, SAP, MQ &#8230;&#8203; no matter what protocol you are using you have a simple way to create your scenario.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_virtual_service_governance">Virtual Service Governance</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You have a tool to manage all your virtual services, to deploy them, to enable them, to generate new versions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_better_ways_to_create_your_simulators">Better ways to create your simulators</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>New techniques to create your simulators like Recording a real service to create their simulator is one of the best techniques you can perform to quickly in a few hours to have a complete simulator of your real backend service.</p>
+</div>
+</div>
+</div>
+    </section>
+
+  </article>
+
+  
+  <section class="post-comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'alexandrevvzquez '; // required: replace example with your forum shortname
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+  
+
+
+
+            <footer class="footer">
+                <span class="footer__copyright">&copy; 2016. All rights reserved.</span>
+                <span class="footer__copyright"><a href="http://uno.daleanthony.com" title="link to page for Uno Ghost theme">Uno theme</a> by <a href="http://daleanthony.com" title="link to website for Dale-Anthony">Dale-Anthony</a></span>
+                <span class="footer__copyright">Proudly published with <a href="http://hubpress.io" title="link to Hubpress website">Hubpress</a></span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//alexandrev.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
+    
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-71852702-1', 'auto');
+    ga('send', 'pageview');
+
+    </script>
+
+</body>
+</html>
